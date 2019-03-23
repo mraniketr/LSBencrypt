@@ -1,6 +1,6 @@
 import os
 import pyperclip
-from fileselector import selection
+from files.fileselector import selection
 
 def createsi():
 	os.system("start cmd")
