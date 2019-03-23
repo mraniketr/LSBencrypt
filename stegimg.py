@@ -1,12 +1,14 @@
 import os
-
+import pyperclip
 def createsi():
-	os.system("steghide --embed -ef data.txt -cf final.jpg  -e none -Z")
-def extractdata():	
-	os.system("steghide --extract -sf final.jpg -xf fdata.txt")
+	os.system("start cmd")
+	pyperclip.copy("steghide --embed -ef data.txt -cf final.jpg  -e none -Z")
+def extractdata():
+	os.system("start cmd")
+	pyperclip.copy("steghide --extract -sf final.jpg -xf fdata.txt")
 
 
-print("\n1. Create Stego image \n2.Extract Data")
+print("\n1.Create Stego image \n2.Extract Data")
 p=int(input())
 if(p==1):
     createsi()
