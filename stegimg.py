@@ -1,5 +1,7 @@
 import os
 import pyperclip
+from fileselector import selection
+
 def createsi():
 	os.system("start cmd")
 	pyperclip.copy("steghide --embed -ef data.txt -cf final.jpg  -e none -Z")
@@ -8,11 +10,13 @@ def extractdata():
 	pyperclip.copy("steghide --extract -sf final.jpg -xf fdata.txt")
 
 
-print("\n1.Create Stego image \n2.Extract Data")
+print("\n1.Select files\n2.Create Stego image \n3.Extract Data")
 p=int(input())
 if(p==1):
-    createsi()
+	selection()
 elif(p==2):
-    extractdata()
+	createsi()
+elif(p==3):
+	extractdata()
 else:
 	print("Incorrect")
